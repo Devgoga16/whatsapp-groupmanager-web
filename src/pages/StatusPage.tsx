@@ -12,7 +12,7 @@ interface Props {
   onGoToPanel: () => void
 }
 
-const API_BASE = 'https://umb-whatsappgroupmanager-b8nycl-6d05dc-31-97-133-67.traefik.me'
+const API_BASE = import.meta.env.VITE_API_BASE_URL
 
 export default function StatusPage({ onGoToPanel }: Props) {
   const [data, setData] = useState<WhatsAppStatus | null>(null)

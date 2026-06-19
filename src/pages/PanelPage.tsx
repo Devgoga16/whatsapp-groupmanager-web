@@ -15,7 +15,7 @@ interface Props {
   onBack: () => void
 }
 
-const API_BASE = 'https://umb-whatsappgroupmanager-b8nycl-6d05dc-31-97-133-67.traefik.me'
+const API_BASE = import.meta.env.VITE_API_BASE_URL
 
 function getInitials(name: string) {
   const words = name.replace(/[^\w\s]/g, '').trim().split(/\s+/)
