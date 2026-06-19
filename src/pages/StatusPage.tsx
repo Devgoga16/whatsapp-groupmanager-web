@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback } from 'react'
+import { API_BASE } from '../config'
 import './StatusPage.css'
 
 interface WhatsAppStatus {
@@ -11,8 +12,6 @@ interface WhatsAppStatus {
 interface Props {
   onGoToPanel: () => void
 }
-
-const API_BASE = import.meta.env.VITE_API_BASE_URL
 
 export default function StatusPage({ onGoToPanel }: Props) {
   const [data, setData] = useState<WhatsAppStatus | null>(null)

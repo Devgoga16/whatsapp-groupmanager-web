@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
+import { API_BASE } from '../config'
 import './ChatView.css'
 
 interface Group {
@@ -34,7 +35,6 @@ interface Props {
   onBack: () => void
 }
 
-const API_BASE = import.meta.env.VITE_API_BASE_URL
 const LIMIT = 30
 
 function formatTime(iso: string) {

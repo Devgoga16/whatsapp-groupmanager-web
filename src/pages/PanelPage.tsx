@@ -1,5 +1,6 @@
 import { useState, useEffect, useMemo } from 'react'
 import ChatView from '../components/ChatView'
+import { API_BASE } from '../config'
 import './PanelPage.css'
 
 interface Group {
@@ -14,8 +15,6 @@ interface Group {
 interface Props {
   onBack: () => void
 }
-
-const API_BASE = import.meta.env.VITE_API_BASE_URL
 
 function getInitials(name: string) {
   const words = name.replace(/[^\w\s]/g, '').trim().split(/\s+/)
